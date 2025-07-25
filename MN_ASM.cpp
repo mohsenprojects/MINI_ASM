@@ -668,12 +668,8 @@ void compileCode() {
 int main() {
     // Read input code
     print("MINI_ASM Compiler (Enter 'RUN' to compile)");
+    print("write help for help");
     print("------------------------------------------");
-    print("Supports: int8, int16, int32, int64, float, double, string, bool");
-    print("Locations: stack, data, heap");
-    print("Arrays: int32[10] stack arr = 0");
-    print("Functions: function myFunc() ... end");
-    print("Printf: printf(\"Hello %d\\n\", 42)");
 
     while (true) {
         printn(">>> ");
@@ -683,8 +679,16 @@ int main() {
         if (line == "RUN" || line == "run") {
             break;
         }
-
-        codeLines.push_back(line);
+        else if (line == "help" || line == "HELP") {
+            print("Supports: int8, int16, int32, int64, float, double, string, bool");
+            print("Locations: stack, data, heap");
+            print("Arrays: int32[10] stack arr = 0");
+            print("Functions: function myFunc() ... end");
+            print("Printf: printf(\"Hello %d\\n\", 42)");
+        }
+        else {
+            codeLines.push_back(line);
+        }
     }
 
     // Compile the code
