@@ -1,17 +1,36 @@
-# MINI_ASM
-a programming language
+# MINI_ASM  
 
-how to define a variable ?
-type of ints in miniasm : 
-int64, int32, int 16, int 8, int (default->32).
+یک زبان برنامه‌نویسی سبک‌وزن با تمرکز بر کنترل حافظه  
 
-the memory locations can define variable :
-data, cannot be until the end of the program
-stack, can free in program and changeable (defualt->stack)
-heap, like stack.
+## نحوه تعریف متغیر  
 
-Example of defining an integer variable:
+### انواع داده عددی:  
+- `int8` (عدد ۸ بیتی)  
+- `int16` (عدد ۱۶ بیتی)  
+- `int32` (عدد ۳۲ بیتی - پیش‌فرض)  
+- `int64` (عدد ۶۴ بیتی)  
 
-int32 stack variable1 = 314124
-int64 data var = 2423
-int v = 342
+### محل ذخیره‌سازی متغیرها:  
+1. **بخش دیتا** (`data`):  
+   - تا پایان برنامه در حافظه باقی می‌ماند  
+   - غیرقابل آزادسازی دستی  
+
+2. **پشته** (`stack`) *(پیش‌فرض)*:  
+   - قابلیت تغییر در حین اجرا  
+   - امکان آزادسازی دستی  
+
+3. **هیپ** (`heap`):  
+   - انعطاف مشابه پشته  
+   - نیازمند مدیریت دستی حافظه  
+
+### مثال‌ها:  
+```rust
+// عدد ۳۲ بیتی روی پشته (پیش‌فرض)  
+int age = 25  
+
+// عدد ۶۴ بیتی در بخش دیتا  
+int64 data balance = 1000000  
+
+// عدد ۱۶ بیتی روی هیپ  
+int16 heap temp = 32767  
+نسخه کامل تر این رو بده البته انگلیسی
