@@ -14,6 +14,4 @@ Example of defining an integer variable:
 
 int32 stack variable1 = 314124
 int64 data var = 2423
-int v=342
-هف
-ه
+int v = 342
