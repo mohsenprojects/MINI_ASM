@@ -32,5 +32,4 @@ int age = 25
 int64 data balance = 1000000  
 
 // عدد ۱۶ بیتی روی هیپ  
-int16 heap temp = 32767  
-نسخه کامل تر این رو بده البته انگلیسی
+int16 heap temp = 32767 
